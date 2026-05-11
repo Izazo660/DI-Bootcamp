@@ -77,7 +77,7 @@ print(similarities)
 
 
 a = "amazing"
-vowels = ["a","e","i","o","u","y"]
+vowels = ["a","e","i","o","u"]
 result = []
 
 for letters in a:
@@ -96,7 +96,7 @@ list = []
 
 for i in range(0,3):
     list.append(i)
-    
+
 new_list = []
 
 for i in range(3):
