@@ -270,3 +270,122 @@ print(add(12,20))
 
 #Exercise 2 : Functions Exercises#2
 
+def reversed_strings(string):
+    reverse_string = string[::-1]
+    return reverse_string
+
+print(reversed_strings("world"))
+print(reversed_strings("word"))
+
+
+
+
+
+import math
+
+def benefactor(tab, target):
+    sum = 0
+    for i in tab:
+        sum += i
+    total_count = len(tab) + 1
+    required_donation = (target * total_count) - sum
+    if required_donation <= 0:
+        return "The average is already met."
+    return math.ceil(required_donation)
+
+donations_list = [14, 30, 5, 7, 9, 11, 15]
+
+print(f"Next donation needed: {benefactor(donations_list, 92)}")
+print(f"Next donation needed: {benefactor(donations_list, 2)}")
+
+
+
+
+def sequence(begin, end, step):
+    return sum(range(begin, end + 1, step))
+
+print(sequence(2,2,2))
+print(sequence(2,6,2))
+print(sequence(1,5,1))
+print(sequence(1,5,3))
+
+
+
+
+
+def max_diff(tab):
+    if len(tab) <= 1:
+        return 0
+    else:
+        return max(tab) - min(tab)
+
+print(max_diff([1, 2, 3, 4]))
+print(max_diff([1, 2, 3, -4]))
+
+
+
+
+def countSmileys(a):
+    count = 0
+    for i in a:
+        if len(i) == 2:
+            if i[0] in ":;" and i[1] in ")D":
+                count +=1
+        elif len(i) == 3:
+            if i[0] in ":;" and i[1] in "-~" and i[2] in ")D":
+                count +=1
+    return count
+
+print(countSmileys([':)', ';(', ';}', ':-D']))
+print(countSmileys([';D', ':-(', ':-)', ';~)']))
+print(countSmileys([';]', ':[', ';*', ':$', ';-D']))
+
+
+
+
+def sentences(paragraph):
+    count = 0
+    for i in paragraph:
+        if i == "." or i == "?" or i == "!":
+            count += 1
+    return count
+
+print(sentences("My name is Ismael. I am 18 years old. I live in France ! What about ?"))
+print(sentences("Hello"))
+
+
+
+
+
+def race(v1, v2, g):
+    if v1 >= v2:
+        return None
+    closing_speed = v2-v1
+    total_seconds = (g * 3600) // closing_speed
+    hours = total_seconds // 3600
+    minutes = (total_seconds % 3600) // 60
+    seconds = total_seconds % 60
+    return [hours, minutes, seconds]
+
+print(race(720, 850, 70))
+print(race(80, 91, 37))
+
+
+
+
+
+def rotation(string1, string2):
+    if len(string1) != len(string2):
+        return -1
+    elif string1 == string2:
+        return 0
+    combined = string2 + string2
+    idx = combined.find(string1)
+    return idx
+
+print(rotation("coffee", "eecoff"))
+print(rotation("eecoff", "coffee"))
+print(rotation("moose", "Moose"))
+print(rotation("isn't", "'tisn"))
+print(rotation("Esham", "Esham"))
+print(rotation("dog", "god"))
