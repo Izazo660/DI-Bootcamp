@@ -201,4 +201,59 @@ print(compact([0,1,2,"",[], False, {}, None, "All done"]))
 
 
 
-def partition()
+def partition(tab, callback):
+    result_even = []
+    result_odd = []
+    for i in tab:
+        if callback(i) == True:
+            result_even.append(i)
+        else:
+            result_odd.append(i)
+    final_result = []
+    final_result.append(result_even)
+    final_result.append(result_odd)
+    return final_result
+
+def is_even(num):
+    return num % 2 == 0
+
+print(partition([1,2,3,4], is_even))
+
+
+
+
+
+def intersection(tab1, tab2):
+    result = []
+    for i in tab1:
+        for j in tab2:
+            if i == j:
+                result.append(j)
+    return result
+
+print(intersection([1,2,3], [2,3,4]))
+
+
+
+
+
+def once(function):
+    has_run = False
+    def inner(*args, **kwargs):
+        nonlocal has_run
+        if not has_run:
+            has_run = True
+            return func(*args, **kwargs)
+        return None
+    return inner
+
+
+
+def add(a,b):
+    return a + b
+
+one_addition = once(add)
+
+print(one_addition(2,2))
+print(one_addition(2,2))
+print(one_addition(12,200))

@@ -1,121 +1,85 @@
-#Exercise : List #1
-
-list = [1,2,3,4]
-
-for i in list:
-    print(i)
-
-for i in list:
-    print(i*20)
+numbers = [1, 2, 3, 4]
+[print(val) for val in numbers]
 
 
 
-list = ["Elie", "Tim","Matt"]
-list2 = []
 
-for name in list:
-    for letter in name:
-        if letter.isupper():
-            list2.append(letter)
 
-print(list2)
+times_twenty = [val * 20 for val in numbers]
+print(times_twenty)
 
 
 
-list = [1,2,3,4,5,6]
-list2 = []
 
-for values in list:
-    if values % 2 == 0:
-        list2.append(values)
-
-print(list2)
+names = ["Elie", "Tim", "Matt"]
+first_letters = [name[0] for name in names]
+print(first_letters)
 
 
 
-list1 = [1,2,3,4]
-list2 = [3,4,5,6]
-intersection = []
 
-index_max1 = len(list1) - 1 
-index_max2 = len(list2) - 1 
+evens_list = [1, 2, 3, 4, 5, 6]
+evens = [val for val in evens_list if val % 2 == 0]
+print(evens)
 
-for idx, values in enumerate(list1):
-    if idx == index_max1 // 2:
-        intersection.append(values)
 
-for idx, values in enumerate(list2):
-    if idx == index_max2 // 2:
-        intersection.append(values)
 
+
+l1 = [1, 2, 3, 4]
+l2 = [3, 4, 5, 6]
+intersection = [val for val in l1 if val in l2]
 print(intersection)
 
 
 
-list1 = ["Elie", "Tim", "Matt"]
-list2 = []
 
-for name in list1:
-    name_reverse = name[::-1].lower()
-    list2.append(name_reverse)
 
-print(list2)
+reversed_names = [name[::-1].lower() for name in names]
+print(reversed_names)
 
 
 
-a = "first"
-b = "third"
-similarities = []
 
-for letters in a:
-    for letter in b:
-        if letters == letter:
-            similarities.append(letter)
 
+
+
+s1 = "first"
+s2 = "third"
+similarities = [char for char in "i r t" if char in s1 and char in s2]
+similarities = list({char for char in s1 if char in s2})
 print(similarities)
 
 
 
-a = "amazing"
-vowels = ["a","e","i","o","u"]
-result = []
-
-for letters in a:
-    for letter in vowels:
-        if letters == letter:
-            break
-    else:
-        result.append(letters)
-
-print(result)
 
 
 
 
-list = []
-
-for i in range(0,3):
-    list.append(i)
-
-new_list = []
-
-for i in range(3):
-    new_list.append(list)
-
-print(new_list)
+div_by_12 = [n for n in range(1, 101) if n % 12 == 0]
+print(div_by_12)
 
 
 
 
 
-list = []
 
-for i in range(0,10):
-    list.append(i)
+word = "amazing"
+no_vowels = [char for char in word if char not in "aeiou"]
+print(no_vowels)
 
-new_list = []
 
-for i in range(10):
-    new_list.append(list)
 
-print(new_list)
+
+
+
+nested_3 = [[val for val in range(3)] for _ in range(3)]
+print(nested_3)
+
+
+
+
+
+
+
+nested_10 = [[val for val in range(10)] for _ in range(10)]
+print(nested_10)
