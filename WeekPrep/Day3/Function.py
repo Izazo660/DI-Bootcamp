@@ -106,13 +106,99 @@ print(list_manipulation([1,2,3], "add", "beginning", 20))
 print(list_manipulation([1,2,3], "add", "end", 30))
 
 def is_palindrome(a):
-    tab = list(a)
-    reverse_tab = tab.reverse()
-    word = []
-    for i in tab:
-        for j in tab :
-            if i == j:
-                word.append(j)
-    return word
+    a.lower()
+    a.replace(" ", "")
+    reverse_a = a[::-1]
+    if a == reverse_a:
+        return True
+    else:
+        return False
 
 print(is_palindrome('testing'))
+print(is_palindrome('tacocat'))
+print(is_palindrome('hannah'))
+print(is_palindrome('robert'))
+
+
+
+
+def frequency(tab, value):
+    count = 0
+    for i in tab:
+        if i == value:
+            count +=1
+    return count
+
+print(frequency([1,2,3,4,4,4], 4))
+print(frequency([True, False, True, True], False))
+
+
+
+
+def flip_case(string, letter):
+    result = ""
+    for char in string:
+        if char.lower() == letter.lower():
+            result += char.swapcase()
+        else:
+            result += char
+    return result
+
+print(flip_case("Hardy har har", "h"))
+
+
+
+
+def multiply_even_numbers(tab):
+    product = 1
+    even_numbers = []
+    for i in tab:
+        if i % 2 == 0:
+            even_numbers.append(i)
+    for i in even_numbers:
+        product *= i
+    return(product)
+
+print(multiply_even_numbers([2,3,4,5,6]))
+
+
+
+
+def mode(tab):
+    count = {}
+    for i in tab:
+        count[i] = count.get(i, 0) + 1
+    maxi = max(count.values())
+    for number, values in count.items():
+        if values == maxi:
+            return number
+
+print(mode([2,4,1,2,3,3,4,4,5,4,4,6,4,6,7,4]))
+
+
+
+
+def capitalize(string):
+    new_string = string.capitalize()
+    return new_string
+
+print(capitalize("tim"))
+print(capitalize("tim"))
+
+
+
+
+def compact(tab):
+    result = []
+    for i in tab:
+        if i:
+            result.append(i)
+    return result
+
+print(compact([0,1,2,"",[], False, {}, None, "All done"]))
+
+
+
+
+
+def partition()
