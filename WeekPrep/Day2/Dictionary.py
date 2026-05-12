@@ -1,10 +1,7 @@
-#Exercise 1 : Dictionary Exercises
-
 tab = [("name", "Elie"), ("job", "Instructor")]
-
-dictio = dict(tab)
-
+dictio = {k: v for k, v in tab}
 print(dictio)
+
 
 
 
@@ -12,43 +9,30 @@ print(dictio)
 
 list1 = ["CA", "NJ", "RI"]
 list2 = ["California", "New Jersey", "Rhode Island"]
-
-fusion = dict(zip(list1, list2))
-
+fusion = {state: full_name for state, full_name in zip(list1, list2)}
 print(fusion)
 
 
 
 
 
-vowel = ["a", "e", "i", "o", "u"]
-values = [0] * len(vowel)
 
-dictionary = dict(zip(vowel, values))
 
-print(dictionary)
+vowel_dict = {v: 0 for v in 'aeiou'}
+print(vowel_dict)
 
 
 
 
-letters = []
-values = []
 
-for i in range(65,91):
-    letters.append(chr(i))
-    values.append(i-64)
 
-alphabet = dict(zip(letters, values))
-
+alphabet = {i - 64: chr(i) for i in range(65, 91)}
 print(alphabet)
 
 
 
 
-vowels_count = {'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}
 
-for i in "awesome sauce":
-    if i in vowels_count:
-        vowels_count[i] +=1
-
+phrase = "awesome sauce"
+vowels_count = {v: phrase.count(v) for v in 'aeiou'}
 print(vowels_count)
