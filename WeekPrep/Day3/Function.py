@@ -237,23 +237,36 @@ print(intersection([1,2,3], [2,3,4]))
 
 
 
-def once(function):
+
+def run_once(function):
     has_run = False
     def inner(*args, **kwargs):
         nonlocal has_run
         if not has_run:
             has_run = True
-            return func(*args, **kwargs)
+            return function(*args, **kwargs)
         return None
     return inner
-
-
 
 def add(a,b):
     return a + b
 
-one_addition = once(add)
+one_addition = run_once(add)
 
 print(one_addition(2,2))
 print(one_addition(2,2))
 print(one_addition(12,200))
+
+@run_once
+def add(a, b):
+    return a + b
+
+print(add(2,2))
+print(add(2,20))
+print(add(12,20))
+
+
+
+
+#Exercise 2 : Functions Exercises#2
+
