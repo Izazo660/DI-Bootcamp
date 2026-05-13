@@ -1,0 +1,46 @@
+1. What is a module?
+
+A module is a library in python that you can use in any python programs.
+
+
+2. List three ways to import a module in Python.
+
+import random
+from random import randint
+import random as c
+
+
+3. What is the purpose of importing?
+
+The purpose is to reuse code created by others or by ourselfs to have more tools that can help us in our code.
+
+
+4. List three examples when you would use the random module.
+
+To pick a random card in a deck
+To generate a password
+To give us a random number
+
+
+5. What is an ImportError?
+
+It's an error where the python interpreter can not find the module that we wan't to import.
+
+
+6. When would using an OrderedDict be useful?
+
+Store items in a dictionary while guaranteeing the order of the keys.
+
+
+7. When would using a defaultdict be useful?
+
+When we wan't to avoid a KeyError, it will automatically provide a default value like a zero or an empty list.
+
+
+8. What is the purpose of the following code:
+if __name__ == '__main__':
+    pass
+
+It ensures that some code only runs when the file is executed directly, if it is imported the code inside this block will be ignored.
+
+
