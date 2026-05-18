@@ -14,7 +14,7 @@ print(multiples_list)
 
 #Challenge 2: Remove Consecutive Duplicate Letters
 
-user_word = input("Enter a word: ")
+user_word = input("Enter a word : ")
 clean_string = ""
 
 for char in user_word:
