@@ -1,4 +1,4 @@
-print("--- Caesar Cipher Program ---")
+print("Caesar Cipher Program")
 
 choice = input("Do you want to (E)ncrypt or (D)ecrypt? ").strip().upper()
 
