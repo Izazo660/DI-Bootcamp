@@ -1,7 +1,7 @@
 import random
 
 # 1. Ask for User Input
-user_string = input("Please enter a string of exactly 10 characters: ")
+user_string = input("Enter a string of exactly 10 characters: ")
 
 
 
