@@ -103,8 +103,8 @@ for product in product_sales:
 most_popular_product = max(product_quantities, key=product_quantities.get)
 
 
-print("--- RETAIL DATA ANALYSIS REPORT ---")
-print("\n[Task 1] Total Revenue per Product Category:")
+print("RETAIL DATA ANALYSIS REPORT")
+print("\n[Task 1] Total Revenue per Product Category :")
 print(product_sales)
 
 print("\n[Task 2] Customer Spending Profiles:")
@@ -123,7 +123,7 @@ print(product_averages)
 print(f"\n[Bonus] Most Popular Product (by Quantity Sold): {most_popular_product} ({product_quantities[most_popular_product]} units)")
 
 print("\n" + "="*50)
-print("--- MARKETING STRATEGY INSIGHTS ---")
+print("MARKETING STRATEGY INSIGHTS")
 print("="*50)
 print(f"1. Cross-Selling & Loyalty: Customers {loyal_customers} have shown regular interest.")
 print("   -> Strategy: Send targeted email rewards or subscription plans to keep them hooked.")
