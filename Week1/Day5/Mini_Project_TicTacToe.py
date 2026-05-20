@@ -66,11 +66,11 @@ def play():
         player_input(current_player, board)
         if check_win(board, current_player):
             display_board(board)
-            print(f"\n🎉 Congratulations! Player {current_player} wins! 🎉")
+            print(f"\n Congratulations ! Player {current_player} wins ! ")
             break
         if check_tie(board):
             display_board(board)
-            print("\n🤝 It's a tie game! Good match! 🤝")
+            print("\n It's a tie game ! Good match !")
             break
         current_player = "O" if current_player == "X" else "X"
 
