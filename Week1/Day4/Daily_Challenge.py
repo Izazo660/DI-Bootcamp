@@ -12,7 +12,7 @@ matrix = []
 lines = MATRIX_STR.splitlines()
 
 for line in lines:
-    if line:  # Évite de prendre les lignes vides
+    if line:
         matrix.append(list(line))
 
 num_columns = max(len(row) for row in matrix) if matrix else 0
