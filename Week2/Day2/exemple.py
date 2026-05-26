@@ -23,3 +23,16 @@ class BlockedDoor(Door):
 
     def close_door(self):
         raise Exception("Error : A blocked door cannot be closed.")
+    
+
+def sum_numbers_only(lst):
+    total = 0
+    for item in lst:
+        # Check if the item is an integer or a float
+        if isinstance(item, (int, float)):
+            total += item
+    return total
+
+my_list = [2, 3, 1, 2, "four", 42, 1, 5, 3, "imanumber"]
+result = sum_numbers_only(my_list)
+print("The sum is:", result)
