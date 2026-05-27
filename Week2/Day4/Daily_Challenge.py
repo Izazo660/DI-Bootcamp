@@ -82,7 +82,7 @@ print("Unique words found: ", analyzer.unique_words()[:5])
 
 print("\n" + "="*40 + "\n")
 
-dirty_string = "Hello, World ! example string... special chars ($@#%)   punctuation !"
+dirty_string = "Hello, World ! example string... special chars ($@#%) or just punctuation !"
 modifier = TextModification(dirty_string)
 
 print("Original Text :            ", modifier.text)
